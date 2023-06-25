@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logos.png" class="logo">
+                <ul id="sidemenu">
+                    <li> <a href="#">Home</a></li>
+                    <li> <a href="#">About</a></li>
+                    <li> <a href="#">Contact</a></li>
+                    <i class="bi bi-times" onclick="closemenu()"></i>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>web development</p>
+                <h2>Hi,I'M<span> Pinal Bhadani </span><br>From AHM</h2>
+            </div>
+        </div>
+
+        <!--- -------------about---------------- --->
+
+        <div id="About">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/user.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>Hello, I am Pinal Bhadani student at Vishwakarma Goverment College Engineering.
+                            I am pinal,a passionate and driven web design Engineer ready to make in the world of
+                            desiging.
+                            I am currently pursuing graduation in BE-EC and have good knowledge to desiging.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="Skills">
+                            <ul>
+                                <li><span>web development</span><br>web desiging</li>
+                                <li><span>App development</span><br>App desiging</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Education">
+                            <ul>
+                                <li><span>2020</span><br>12th science passig</li>
+                                <li><span>2020-present</span><br>3rd year in BE-EC at VGEC</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-----------------------------contact------------------------------------->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                    <h1 class="sub-title"> Contact Me</h1>
+                    <p><i class="bi bi-send"></i>pinal737bhadani@gmail.com</p>
+                    <p><i class="bi bi-phone"></i>+91 8980800404</p>
+                    <div class="icons">
+                        <div class="icons"><i class="bi bi-meta"></i><a href="https://www.facebook.com/pinu.bhadani"></div>
+                        <div class="icons"><i class="bi bi-instagram"></i><a href="https://instagram.com/pinu_0297?igshid=NGExMmI2YTkyZg=="></a></i></div>
+                        <div class="icons"><i class="bi bi-linkedin"></i><a href="https://www.linkedin.com/in/pinal-bhadani-29624424a"></a></div>
+                    </div>
+                    <a href="images/pinu bhadani.pdf" download class="btn btn2" >Download CV</a>
+                    </div>
+                    <div class="contact-right">
+                        <form>
+                            <input type="text" name="Name"placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>copyright @ pinal.bhadani <i class="bi bi-heart"></i></p>
+            </div>
+        </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname) {
+                for (tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+
+                }
+                for (tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab")
+            }
+
+        </script>
+</body>
+
+</html>
